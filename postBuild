@@ -1,2 +1,14 @@
 #!/bin/bash
-echo "c.NotebookApp.default_url = '/voila/render/DynamicNetwork.ipynb'" >> ~/.jupyter/jupyter_notebook_config.py
+
+# Path to the Jupyter notebook configuration file
+CONFIG_FILE="/home/jovyan/.jupyter/jupyter_notebook_config.py"
+
+# Create the configuration file if it does not exist
+if [ ! -f "$CONFIG_FILE" ]; then
+    mkdir -p /home/jovyan/.jupyter
+    echo "Creating Jupyter notebook configuration file."
+    touch "$CONFIG_FILE"
+fi
+
+# Append the configuration to set Voilà as the default URL
+echo "c.NotebookApp.default_url = '/voila/render/YourNotebook.ipynb'" >> "$CONFIG_FILE"

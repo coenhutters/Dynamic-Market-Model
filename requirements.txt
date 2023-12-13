@@ -1,4 +1,5 @@
 numpy
 ipywidgets
 matplotlib
+voila
 # Add any other necessary packages

@@ -1,0 +1,4 @@
+numpy
+ipywidgets
+matplotlib
+# Add any other necessary packages
